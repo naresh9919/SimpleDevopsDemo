@@ -46,9 +46,9 @@ In *part-01* we create Docker image on ansible server through Jenkins job and pu
        - Exec Command: 
 	      - `cd /opt/docker`
           - `docker build -t valaxy_demo .`
-	      - `docker tag valaxy_demo valaxy/valaxy_demo`
-          - `docker push valaxy/valaxy_demo`
-          - `docker rmi valaxy_demo valaxy/valaxy_demo`
+	      - `docker tag valaxy_demo nareshbabu1991/valaxy_demo`
+          - `docker push nareshbabu1991/valaxy_demo`
+          - `docker rmi valaxy_demo nareshbabu1991/valaxy_demo`
               
 1. Login to Docker host and check images and containers. (no images and containers)
 
@@ -78,10 +78,10 @@ In *Part-02* we create *create_docker_container.yml* playbook. this get intiated
         - name: remove stopped container
           shell: docker rm -f valaxy_demo	  
         - name: remove docker images
-          shell: docker image rm -f valaxy/valaxy_demo
+          shell: docker image rm -f nareshbabu1991/valaxy_demo
           
         - name: create docker image
-          shell: docker run -d --name valaxy_demo -p 8090:8080 valaxy/valaxy_demo
+          shell: docker run -d --name valaxy_demo -p 8090:8080 nareshbabu1991/valaxy_demo
 
 1. Add this script to Jenkins job.
    - Chose *"configure"* to modify your jenkins job. 
