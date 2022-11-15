@@ -27,7 +27,7 @@ In *part-01* we create Docker image on ansible server through Jenkins job and pu
 1. Login to Jenkins console
 1. Create *Jenkins job*, Fill the following details,
    - *Source Code Management:*
-      - Repository : `https://github.com/ValaxyTech/hello-world.git`
+      - Repository : `https://github.com/naresh9919/Hello-World.git`
       - Branches to build : `*/master`  
    - *Build:*
      - Root POM:`pom.xml`
@@ -117,7 +117,7 @@ Lets modify jenkins job which was created in *Part-01* as below.
 
 1. Create Jenkins job 
    - *Source Code Management:*
-      - Repository : `https://github.com/ValaxyTech/hello-world.git`
+      - Repository : `https://github.com/naresh9919/Hello-World.git`
       - Branches to build : `*/master`  
    - *Build:*
      - Root POM:`pom.xml`
